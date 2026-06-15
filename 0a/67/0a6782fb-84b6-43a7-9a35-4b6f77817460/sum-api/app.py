@@ -9,15 +9,13 @@ def sum_numbers():
     a = payload.get("a", 0)
     b = payload.get("b", 0)
     try:
-        a_value = float(a)
+        result = float(a) + float(b)
     except (TypeError, ValueError):
-        a_value = 0.0
-    try:
-        b_value = float(b)
-    except (TypeError, ValueError):
-        b_value = 0.0
-    return jsonify({"result": a_value + b_value})
+        return jsonify({"error": "a and b must be numbers"}), 400
+    if result.is_integer():
+        result = int(result)
+    return jsonify({"result": result})
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    app.run()
