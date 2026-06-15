@@ -14,7 +14,7 @@ def sum_numbers():
         return jsonify({"error": "a and b must be numbers"}), 400
     if result.is_integer():
         result = int(result)
-    return jsonify({"result": result})
+    return jsonify({"result": result, "by": "v2"})
 
 
 if __name__ == "__main__":
