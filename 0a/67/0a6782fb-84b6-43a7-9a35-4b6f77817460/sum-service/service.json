@@ -1,0 +1,15 @@
+{
+  "service_id": "sum-service",
+  "slug": "sum-service",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/sum",
+      "methods": [
+        "POST"
+      ],
+      "description": "Add two numbers and return their sum."
+    }
+  ],
+  "updated_at_ms": 1781544214288
+}
