@@ -4,11 +4,13 @@ app = Flask(__name__)
 
 
 def _is_number(value):
-    return isinstance(value, (int, float)) and not isinstance(value, bool)
+    if isinstance(value, bool):
+        return False
+    return isinstance(value, (int, float))
 
 
 @app.post("/sum")
-def sum_endpoint():
+def sum_numbers():
     payload = request.get_json(silent=True) or {}
     a = payload.get("a")
     b = payload.get("b")

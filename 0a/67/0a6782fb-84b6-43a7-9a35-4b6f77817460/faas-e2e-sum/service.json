@@ -8,8 +8,8 @@
       "methods": [
         "POST"
       ],
-      "description": "Add two numbers. Body: {a, b}. Returns {result: a+b} or 400 on invalid input."
+      "description": "Sum two numbers a and b; returns {result: a+b} or HTTP 400 when a/b are missing or not numbers."
     }
   ],
-  "updated_at_ms": 1781574402912
+  "updated_at_ms": 1781577664834
 }
