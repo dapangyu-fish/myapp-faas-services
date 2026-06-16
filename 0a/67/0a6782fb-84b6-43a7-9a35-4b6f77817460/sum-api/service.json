@@ -8,8 +8,8 @@
       "methods": [
         "POST"
       ],
-      "description": ""
+      "description": "Add two numbers. Body: {\"a\": number, \"b\": number} -> {\"result\": a+b}"
     }
   ],
-  "updated_at_ms": 1781573316810
+  "updated_at_ms": 1781573804918
 }
