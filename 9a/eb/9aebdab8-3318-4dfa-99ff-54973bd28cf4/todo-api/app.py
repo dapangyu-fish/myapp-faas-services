@@ -26,7 +26,7 @@ def create_todo():
         'id': str(uuid.uuid4())[:8],
         'title': data.get('title', ''),
         'done': False,
-        'created_at': time.strftime('%Y-%m-%d %H:%M')
+        'created_at': time.strftime('%Y-%m-%d %H:%M'),
     }
     todos.insert(0, todo)
     return jsonify({'todo': todo}), 201
