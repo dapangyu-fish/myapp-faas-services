@@ -1,0 +1,25 @@
+{
+  "service_id": "svc-59f6da376f5f",
+  "slug": "todo-api",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/todos",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/todos/<todo_id>",
+      "methods": [
+        "GET",
+        "PUT",
+        "DELETE"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1781579959905
+}
