@@ -4,18 +4,20 @@ app = Flask(__name__)
 
 
 @app.post("/sum")
-def sum_numbers():
+def sum_endpoint():
     payload = request.get_json(silent=True) or {}
     a = payload.get("a", 0)
     b = payload.get("b", 0)
     try:
-        result = float(a) + float(b)
+        a_value = int(a)
     except (TypeError, ValueError):
-        return jsonify({"error": "a and b must be numbers"}), 400
-    if result.is_integer():
-        result = int(result)
-    return jsonify({"result": result, "by": "v2"})
+        a_value = 0
+    try:
+        b_value = int(b)
+    except (TypeError, ValueError):
+        b_value = 0
+    return jsonify({"result": a_value + b_value})
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=8080)
