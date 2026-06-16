@@ -1,0 +1,15 @@
+{
+  "service_id": "faas-e2e-sum",
+  "slug": "faas-e2e-sum",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/sum",
+      "methods": [
+        "POST"
+      ],
+      "description": "Add two numbers. Body: {a, b}. Returns {result: a+b} or 400 on invalid input."
+    }
+  ],
+  "updated_at_ms": 1781574402912
+}
