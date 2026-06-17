@@ -1,0 +1,22 @@
+{
+  "service_id": "svc-9dce884adabd",
+  "slug": "echo-tester",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/echo",
+      "methods": [
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/ping",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1781711689215
+}
