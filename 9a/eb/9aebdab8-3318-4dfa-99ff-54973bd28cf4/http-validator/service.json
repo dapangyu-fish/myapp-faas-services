@@ -1,0 +1,52 @@
+{
+  "service_id": "http-validator",
+  "slug": "http-validator",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/ping",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/echo",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/users",
+      "methods": [
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/users/<user_id>",
+      "methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/headers",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/capabilities",
+      "methods": [
+        "OPTIONS"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1781668494245
+}
