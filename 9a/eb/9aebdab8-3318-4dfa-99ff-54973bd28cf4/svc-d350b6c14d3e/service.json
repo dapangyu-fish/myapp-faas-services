@@ -1,0 +1,25 @@
+{
+  "service_id": "svc-d350b6c14d3e",
+  "slug": "task-api",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/tasks",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/tasks/<task_id>",
+      "methods": [
+        "GET",
+        "PUT",
+        "DELETE"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1781668748813
+}
