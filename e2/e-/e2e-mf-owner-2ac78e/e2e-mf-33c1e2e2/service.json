@@ -1,0 +1,15 @@
+{
+  "service_id": "e2e-mf-33c1e2e2",
+  "slug": "e2e-mf-33c1e2e2",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/compute",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782059596331
+}
