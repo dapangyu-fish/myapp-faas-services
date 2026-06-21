@@ -1,0 +1,38 @@
+{
+  "service_id": "svc-c26fa3f94bbc",
+  "slug": "rental-listings-api",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/listings",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/listings/<int:listing_id>",
+      "methods": [
+        "GET",
+        "DELETE"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/listings/<int:listing_id>/rent",
+      "methods": [
+        "PUT"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/regions",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782064875946
+}
