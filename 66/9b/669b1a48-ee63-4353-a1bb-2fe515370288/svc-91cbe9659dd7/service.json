@@ -1,0 +1,31 @@
+{
+  "service_id": "svc-91cbe9659dd7",
+  "slug": "second-hand-market",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/items",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/items/<item_id>",
+      "methods": [
+        "GET",
+        "DELETE"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/stats",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782064485457
+}
