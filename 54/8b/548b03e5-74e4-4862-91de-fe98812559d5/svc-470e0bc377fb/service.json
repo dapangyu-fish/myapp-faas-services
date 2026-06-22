@@ -1,0 +1,23 @@
+{
+  "service_id": "svc-470e0bc377fb",
+  "slug": "bookmarks-api",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/bookmarks",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/bookmarks/<bookmark_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782092654247
+}
