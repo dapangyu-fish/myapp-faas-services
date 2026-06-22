@@ -26,8 +26,10 @@ def list_expenses():
         items.append({
             "id": row.get("id"),
             "amount": amount,
+            "amount_label": ("%.2f" % amount),
             "note": row.get("note") or "",
             "created_at": created.isoformat() if hasattr(created, "isoformat") else created,
+            "created_label": created.strftime("%Y-%m-%d %H:%M") if hasattr(created, "strftime") else (created or ""),
         })
     # 余额合计仅供前端展示，包含全部历史记录的总额
     total_row = myapp_db.queryone("SELECT COALESCE(SUM(amount), 0) AS total FROM expenses")
@@ -50,13 +52,16 @@ def create_expense():
         [amount, note],
     )
     created = row.get("created_at") if row else None
+    row_item = row or {}
     return jsonify({
         "ok": True,
         "item": {
-            "id": row.get("id") if row else None,
-            "amount": _to_float(row.get("amount")) if row else amount,
-            "note": row.get("note") if row else note,
-            "created_at": created.isoformat() if hasattr(created, "isoformat") else created,
+            "id": row_item.get("id"),
+            "amount": _to_float(row_item.get("amount")) if row_item else amount,
+            "amount_label": ("%.2f" % _to_float(row_item.get("amount"))) if row_item else ("%.2f" % amount),
+            "note": row_item.get("note") if row_item else note,
+            "created_at": created.isoformat() if hasattr(created, "isoformat") else (created or ""),
+            "created_label": created.strftime("%Y-%m-%d %H:%M") if hasattr(created, "strftime") else (created or ""),
         }
     }), 201
 
