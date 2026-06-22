@@ -1,0 +1,23 @@
+{
+  "service_id": "svc-512b19190150",
+  "slug": "notes-api",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/notes",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/notes/<note_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782091534861
+}
