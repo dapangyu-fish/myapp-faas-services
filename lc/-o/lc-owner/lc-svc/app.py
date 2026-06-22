@@ -2,4 +2,4 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 @app.get('/ping')
 def ping():
-    return jsonify(v=1)
+    return jsonify(v=2)
