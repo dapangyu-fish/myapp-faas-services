@@ -1,0 +1,15 @@
+{
+  "service_id": "lc-svc",
+  "slug": "lc-svc",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/ping",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782098668191
+}
