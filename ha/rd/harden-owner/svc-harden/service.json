@@ -1,0 +1,15 @@
+{
+  "service_id": "svc-harden",
+  "slug": "h",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/p",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782128631364
+}
