@@ -1,0 +1,16 @@
+{
+  "service_id": "svc-11de723b4af8",
+  "slug": "message-board-api",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/messages",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782091578149
+}
