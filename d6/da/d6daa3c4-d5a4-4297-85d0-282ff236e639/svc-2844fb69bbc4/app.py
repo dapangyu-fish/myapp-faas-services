@@ -1,6 +1,3 @@
-from __future__ import annotations
-from datetime import datetime, timezone
-from decimal import Decimal
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
@@ -20,7 +17,7 @@ def list_expenses():
             "amount": float(r[1]) if r[1] is not None else 0,
             "category": r[2] or "",
             "note": r[3] or "",
-            "created_at": r[4].isoformat() if r[4] is not None else ""
+            "created_at": str(r[4]) if r[4] is not None else ""
         })
     total = 0.0
     for it in items:
@@ -53,5 +50,5 @@ def create_expense():
         "amount": float(row[1]),
         "category": row[2],
         "note": row[3],
-        "created_at": row[4].isoformat()
+        "created_at": str(row[4])
     }), 201
