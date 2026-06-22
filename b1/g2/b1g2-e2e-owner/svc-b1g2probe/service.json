@@ -1,0 +1,15 @@
+{
+  "service_id": "svc-b1g2probe",
+  "slug": "b1g2probe",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/whoami",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782123959902
+}
