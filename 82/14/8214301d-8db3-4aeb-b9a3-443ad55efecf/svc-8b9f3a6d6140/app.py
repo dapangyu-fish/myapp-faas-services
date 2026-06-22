@@ -18,9 +18,12 @@ def create_todo():
     title = (body.get("title") or "").strip()
     if not title:
         return jsonify(error="title is required"), 400
-    row = myapp_db.queryone(
-        "INSERT INTO todos(title, done) VALUES (%s, %s) RETURNING id, title, done",
+    myapp_db.execute(
+        "INSERT INTO todos(title, done) VALUES (%s, %s)",
         [title, False]
+    )
+    row = myapp_db.queryone(
+        "SELECT id, title, done FROM todos ORDER BY id DESC LIMIT 1"
     )
     return jsonify({"id": row[0], "title": row[1], "done": row[2]}), 201
 
@@ -33,9 +36,12 @@ def toggle_todo(todo_id):
     if not existing:
         return jsonify(error="not found"), 404
     new_done = not existing[2]
-    row = myapp_db.queryone(
-        "UPDATE todos SET done = %s WHERE id = %s RETURNING id, title, done",
+    myapp_db.execute(
+        "UPDATE todos SET done = %s WHERE id = %s",
         [new_done, todo_id]
+    )
+    row = myapp_db.queryone(
+        "SELECT id, title, done FROM todos WHERE id = %s", [todo_id]
     )
     return jsonify({"id": row[0], "title": row[1], "done": row[2]})
 
