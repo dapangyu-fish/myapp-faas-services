@@ -1,0 +1,1 @@
+CREATE TABLE notes (id uuid primary key default gen_random_uuid(), owner text not null, body text);
