@@ -1,0 +1,15 @@
+{
+  "service_id": "df-cap-6",
+  "slug": "df-cap-6",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/ping",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782096689537
+}
