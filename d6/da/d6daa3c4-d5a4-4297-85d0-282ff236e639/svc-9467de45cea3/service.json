@@ -1,0 +1,16 @@
+{
+  "service_id": "svc-9467de45cea3",
+  "slug": "expense-tracker-api",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/expenses",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782091553089
+}
