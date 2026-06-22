@@ -18,12 +18,15 @@ def create_todo():
     title = (body.get("title") or "").strip()
     if not title:
         return jsonify(error="title is required"), 400
-    myapp_db.execute(
-        "INSERT INTO todos(title, done) VALUES (%s, %s)",
-        [title, False]
-    )
+    with myapp_db.tx() as cur:
+        cur.execute(
+            "INSERT INTO todos(title, done) VALUES (%s, %s)",
+            [title, False]
+        )
+        cur.execute("SELECT LASTVAL()")
+        new_id = cur.fetchone()[0]
     row = myapp_db.queryone(
-        "SELECT id, title, done FROM todos ORDER BY id DESC LIMIT 1"
+        "SELECT id, title, done FROM todos WHERE id = %s", [new_id]
     )
     return jsonify({"id": row[0], "title": row[1], "done": row[2]}), 201
 
