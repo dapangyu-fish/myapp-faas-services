@@ -1,22 +1,60 @@
 {
   "service_id": "svc-9dce884adabd",
-  "slug": "echo-tester",
+  "slug": "tieba",
   "runtime": "python-flask",
   "routes": [
     {
-      "path": "/echo",
+      "path": "/whoami",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/me",
       "methods": [
         "POST"
       ],
       "description": ""
     },
     {
-      "path": "/ping",
+      "path": "/boards",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/board",
       "methods": [
         "GET"
       ],
       "description": ""
+    },
+    {
+      "path": "/threads",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/thread",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/posts",
+      "methods": [
+        "POST",
+        "DELETE"
+      ],
+      "description": ""
     }
   ],
-  "updated_at_ms": 1781711689215
+  "updated_at_ms": 1782139335256
 }
