@@ -1,15 +1,10 @@
 from flask import Flask, jsonify, request
-
 app = Flask(__name__)
-
-_CATEGORIES = ["餐饮", "交通", "购物", "住房", "娱乐", "医疗", "教育", "其他"]
 
 @app.get("/expenses")
 def list_expenses():
     import myapp_db
-    rows = myapp_db.query(
-        "SELECT id, amount, category, note, created_at FROM expenses ORDER BY created_at DESC LIMIT 200"
-    )
+    rows = myapp_db.query("SELECT id, amount, category, note, created_at FROM expenses ORDER BY created_at DESC LIMIT 200")
     items = []
     for r in rows:
         items.append({
@@ -19,30 +14,23 @@ def list_expenses():
             "note": r[3] or "",
             "created_at": str(r[4]) if r[4] is not None else ""
         })
-    total = 0.0
-    for it in items:
-        total += it["amount"]
+    total = sum(it["amount"] for it in items)
     return jsonify({"expenses": items, "total": round(total, 2), "count": len(items)})
 
 @app.post("/expenses")
 def create_expense():
     import myapp_db
     body = request.get_json(silent=True) or {}
-    amount = body.get("amount", 0)
-    category = body.get("category", "其他")
-    note = body.get("note", "")
     try:
-        amount = float(amount)
+        amount = float(body.get("amount", 0))
     except (TypeError, ValueError):
-        return jsonify(error="金额必须为数字"), 400
+        return jsonify(error="amount must be a number"), 400
     if amount <= 0:
-        return jsonify(error="金额必须大于 0"), 400
-    if category not in _CATEGORIES:
-        category = "其他"
-    note = str(note)[:200]
+        return jsonify(error="amount must be > 0"), 400
+    category = str(body.get("category", "")).strip() or "其他"
+    note = str(body.get("note", ""))[:200]
     row = myapp_db.queryone(
-        "INSERT INTO expenses(amount, category, note) VALUES (%s, %s, %s) "
-        "RETURNING id, amount, category, note, created_at",
+        "INSERT INTO expenses(amount, category, note) VALUES (%s, %s, %s) RETURNING id, amount, category, note, created_at",
         [amount, category, note]
     )
     return jsonify({
