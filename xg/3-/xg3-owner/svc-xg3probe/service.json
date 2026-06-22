@@ -1,0 +1,15 @@
+{
+  "service_id": "svc-xg3probe",
+  "slug": "x",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/p",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782127811371
+}
