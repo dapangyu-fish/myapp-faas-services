@@ -1,0 +1,24 @@
+{
+  "service_id": "svc-f415795b4f96",
+  "slug": "tdlst",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/todos",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/todos/<todo_id>",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782092137494
+}
