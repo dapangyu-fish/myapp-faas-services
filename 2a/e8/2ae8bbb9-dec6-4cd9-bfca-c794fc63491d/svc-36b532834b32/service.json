@@ -1,0 +1,53 @@
+{
+  "service_id": "svc-36b532834b32",
+  "slug": "forum",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/whoami",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/me",
+      "methods": [
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/threads",
+      "methods": [
+        "GET",
+        "POST",
+        "DELETE"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/thread",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/comments",
+      "methods": [
+        "POST",
+        "DELETE"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/user",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782220863249
+}
