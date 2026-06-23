@@ -1,0 +1,71 @@
+{
+  "service_id": "svc-26059e3f618e",
+  "slug": "checkin-community",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/whoami",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/me",
+      "methods": [
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/feed",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/checkins",
+      "methods": [
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/checkins/<checkin_id>",
+      "methods": [
+        "DELETE"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/checkin",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/like",
+      "methods": [
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/comments",
+      "methods": [
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/myfeed",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782221162981
+}
