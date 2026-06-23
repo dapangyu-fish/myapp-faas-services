@@ -1,0 +1,58 @@
+{
+  "service_id": "svc-7c84578636bd",
+  "slug": "ticket-system",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/whoami",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/me",
+      "methods": [
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/tickets",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/tickets/<ticket_id>",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/tickets/<ticket_id>/messages",
+      "methods": [
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/tickets/<ticket_id>/read",
+      "methods": [
+        "PUT"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/tickets/<ticket_id>/close",
+      "methods": [
+        "PUT"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782222233507
+}
