@@ -1,0 +1,15 @@
+{
+  "service_id": "svc-7ba42eda2ee9",
+  "slug": "sgtest",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/whoami",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782188646174
+}
