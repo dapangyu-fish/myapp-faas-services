@@ -1,0 +1,73 @@
+{
+  "service_id": "svc-7af49c642ceb",
+  "slug": "xhs-notes",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/whoami",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/me",
+      "methods": [
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/feed",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/my-posts",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/posts",
+      "methods": [
+        "POST",
+        "DELETE"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/post",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/comments",
+      "methods": [
+        "POST",
+        "DELETE"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/like",
+      "methods": [
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/user",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782232033393
+}
