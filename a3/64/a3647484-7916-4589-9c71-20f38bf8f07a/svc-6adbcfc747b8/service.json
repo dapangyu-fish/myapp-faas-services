@@ -1,0 +1,67 @@
+{
+  "service_id": "svc-6adbcfc747b8",
+  "slug": "cloud-forum",
+  "runtime": "python-flask",
+  "routes": [
+    {
+      "path": "/whoami",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/profile",
+      "methods": [
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/zones",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/zone",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/topics",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/topic",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/reply",
+      "methods": [
+        "POST",
+        "DELETE"
+      ],
+      "description": ""
+    },
+    {
+      "path": "/mine",
+      "methods": [
+        "GET"
+      ],
+      "description": ""
+    }
+  ],
+  "updated_at_ms": 1782802487453
+}
